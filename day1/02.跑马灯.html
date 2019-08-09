@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <!--v-on:可以简写为@-->
+        <input type="button" value="开始" @click="start">
+        <input type="button" value="停止" @click="end">
+
+        <h4>{{msg}}</h4>
+    </div>
+
+<script>
+    // 在vm实例中，想要获取data中的数据或调用methods中的方法，必须通过
+    // this.数据属性名  或   this.方法名  来进行访问
+    // 这里的this 就代表new出来的vm实例
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'ABCDEFGH',
+            intervalid:null  //定时器变量
+        },
+        methods:{
+            /* 【start:function(){}】 可以简写为 【start(){}】   */
+            start(){
+                // 处理逻辑：
+                // 1.拿到msg字符串
+                // 2.处理字符串：用substring，将第一个字符截取出来，放在最后一个位置
+                // 3.实现自动截取：将2中的步骤放在定时器中
+                /*var _this = this;  ①
+                setInterval( function()  {
+                    //获取第一个字符
+                    var head = _this.msg.substring(0,1);
+                    //获取剩下的字符
+                    //substring第二个参数不写就表示到结尾
+                    var tail = _this.msg.substring(1);
+                    _this.msg = tail + head;
+               },200);*/
+
+
+                //判断是否已经有定时器在运行，如果有，直接return出去，没有才开启新的定时器
+                if(this.intervalid != null)return;
+                //去掉function，在小括号和大括号之间加上【 => 】，这样一来函数内部的this和外部的this指向同一个，不需要①这一句
+                this.intervalid = setInterval( () => {
+                    //获取第一个字符
+                    var head = this.msg.substring(0,1);
+                    //获取剩下的字符
+                    //substring第二个参数不写就表示到结尾
+                    var tail = this.msg.substring(1);
+                    this.msg = tail + head;
+                },200);
+
+
+                // vm实例会自动监听data中数据的改变，只要数据一发生变化就会同步到页面中
+                // 程序员只需关心数据，不用考虑重新渲染DOM
+            },
+            end() {
+                //清除定时器
+                clearInterval(this.intervalid);
+                //定时器变量置空
+                this.intervalid = null;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

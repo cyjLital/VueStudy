@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .inner{
+            width: 200px;
+            height: 400px;
+            background-color: bisque;
+        }
+
+        .div1{
+            width: 500px;
+            height:500px;
+            background-color: aquamarine;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background-color: saddlebrown;
+        }
+        #div4{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="div1" @click="div1">
+
+        <!--点击btn，先输出 触发btnHandler，再输出 触发divHandler-->
+        <div class="inner" @click="divHandler">
+
+            <input type="button" value="戳它" @click.stop="btnHandler">
+
+        </div>
+
+
+        <div class="inner" @click="divHandler">
+            <!--事件修饰符.stop 阻止冒泡，不加.stop会先触发btn的点击事件，再触发它外层的div的点击事件-->
+            <!--只输出 触发btnHandler -->
+            <input type="button" value="戳它" @click.stop="btnHandler">
+
+        </div>
+
+        <!--事件修饰符.capture捕获事件，从外向里触发事件-->
+        <!--只输出 触发divHandler -->
+        <div class="inner" @click.capture="divHandler">
+
+            <input type="button" value="戳它" @click="btnHandler">
+
+        </div>
+
+
+        <!--事件修饰符.self自身触发事件，只有在自身被点击的时候才触发，不受冒泡机制影响-->
+        <!--只有点击div时才输出 触发divHandler -->
+        <div class="inner" @click.self="divHandler">
+
+            <input type="button" value="戳它" @click="btnHandler">
+
+        </div>
+
+        <!--事件修饰符.prevent阻止默认行为，比如a标签会跳转，加上.prevent会阻止默认跳转-->
+        <a href="http://www.baidu.com" target="_blank" @click.prevent="preventClick">点击去百度</a>
+
+
+        <!--事件修饰符.once只触发一次，与.prevent一起用时.prevent阻止默认行为也只触发一次-->
+        <!--事件修饰符可以串联-->
+        <a href="http://www.baidu.com" target="_blank" @click.prevent.once="preventClick">点击去百度</a>
+
+        <!-- .stop和.self的区别：
+        结构：-div1
+                -div2
+                    -div3
+                    -div4
+        ①给div2点击事件加上.self：冒泡从div4 -> div1 ，div2事件只有在点击她自身时才触发
+        ②给div2点击事件加上.stop:冒泡从div4 -> div2 ，到div2就停止了，div1不再触发-->
+        <div id="div2" @click.stop="div2">
+            <div id="div3" @click="div3"></div>
+            <div id="div4" @click="div4"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+
+            },
+            methods:{
+                divHandler(){
+                    console.log("触发divHandler");
+                },
+                btnHandler(){
+                    console.log("触发btnHandler");
+                },
+                preventClick(){
+                    console.log("a标签的点击事件");
+                },
+                div1(){
+                    console.log("触发div1");
+                },
+                div2(){
+                    console.log("触发div2");
+                },
+                div3(){
+                    console.log("触发div3");
+                },
+                div4(){
+                    console.log("触发div4");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

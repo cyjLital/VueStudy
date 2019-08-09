@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式-style</title>
+    <script src="https://unpkg.com/vue/dist/vue.js" ></script>
+
+</head>
+<body>
+    <div id="app">
+
+        <!--普通样式-->
+        <h1 style="color:red;">这是h1大小的标题</h1>
+
+        <!--对象就是无序键值对-->
+        <!--属性名中有短横线-时，属性名必须加引号-->
+        <h1 :style="styleObj1">这是h1大小的标题</h1>
+
+
+        <h1 :style="[styleObj1,styleObj2]">这是h1大小的标题</h1>
+
+
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                styleObj1:{color:'red','font-weight':200},
+                styleObj2: {'font-style':'italic'}
+            },methods:{
+
+            }
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for循环</title>
+    <script src="https://unpkg.com/vue/dist/vue.js" ></script>
+
+</head>
+<body>
+    <div id="app">
+        <ul>
+
+            <!--1.循环普通数组-->
+            <li v-for="item in items">{{item}}</li>
+
+            <!--添加索引值-->
+            <li v-for="(item,i) in items">第{{i}}项:{{item}}</li>
+        </ul>
+
+
+        <!--2.循环对象数组-->
+        <p v-for="(user,i) in users">第{{i}}项：{{user.id}}---{{user.name}}</p>
+
+        <!--3.循环对象-->
+        <!--对象是键值对，键放在第二位-->
+        <!--第三个位置是索引-->
+        <p v-for="(value,key,i) in user">{{key}}:{{value}}:{{i}}</p>
+
+        <!--4.迭代数字，从1开始-->
+        <p v-for="count in 10">这是第 {{count}} 次循环</p>
+
+        <!--在2.2.0以后的版本中，在组件中使用v-for时的key是必须的-->
+        <!--key属性只能用number或string-->
+        <div>
+            ID:<input type="text" v-model="id">
+            NAME:<input type="text" v-model="name">
+            <input type="button" value="添加" @click="add">
+        </div>
+        <p v-for="item in list" :key="item.id">
+            <input type="checkbox">
+            {{item.id}}---{{item.name}}
+        </p>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                items:[1,2,3,4],  //数组
+                users:[   //对象数组
+                    {id:1,name:'a'},
+                    {id:2,name:'b'},
+                    {id:3,name:'c'},
+                    {id:4,name:'d'}
+                ],
+                user:{   //对象
+                    id:1,
+                    name:'hello',
+                    gender:'男'
+                },
+                list:[
+                    {id:1,name:'AAA'},
+                    {id:2,name:'BBB'},
+                    {id:3,name:'CCC'},
+                    {id:4,name:'DDD'}
+                ],
+                id:null,
+                name:null
+
+            },
+            methods:{
+                add(){
+    //                    this.list.push({id:this.id,name:this.name});
+                    this.list.unshift({id:this.id,name:this.name});
+
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

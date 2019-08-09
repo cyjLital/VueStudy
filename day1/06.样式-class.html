@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式-class</title>
+    <script src="https://unpkg.com/vue/dist/vue.js" ></script>
+    <style>
+        .red{
+            color: red;
+        }
+
+        .thin{
+            font-weight: 200;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+        .active{
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <!--普通类选择器-->
+        <h1 class="red thin">这是一个h1的标题</h1>
+
+        <!--第一种方式：直接传递一个类名数组-->
+        <!--class需要用v-bind数据绑定-->
+        <!--类名必须用单引号包起来，否则会被识别为对象名-->
+        <h1 :class="['red','italic','thin']">这是一个h1的标题</h1>
+
+        <!--在数组中使用三元表达式-->
+        <h1 :class="['red','italic',flag?'active':'']">这是一个h1的标题</h1>
+        <!--第二种方式：在数组中使用对象代替三元表达式提高可读性-->
+        <h1 :class="['red','italic',{'active':flag}]">这是一个h1的标题</h1>
+
+
+        <!--第三种方式：在为class使用v-bind绑定对象的时候，对象属性名是类名，引号可带可不带，属性值是一个标识符-->
+        <h1 :class="{red:true,thin:true,italic:false,active:false}">这是一个h1的标题</h1>
+        <!--也可以写成这样，将对象写在data中，class绑定数据的时候直接引用对象名-->
+        <h1 :class="classObj">这是一个h1的标题</h1>
+
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                flag:true,
+                classObj:{red:true,thin:true,italic:false,active:false}
+            },
+            methods:{
+
+            }
+        })
+    </script>
+
+</body>
+</html>

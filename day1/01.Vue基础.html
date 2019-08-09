@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--最新版本-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+       <!--v-cloak 解决刷新或加载时出现闪烁-->
+        <p v-cloak>{{ message}}</p>
+        <h3 v-text="message"></h3>
+
+       <!-- v-text 和 {{ }}插值表达式 作用相同，但是有以下几个区别：
+        1.默认v-text是没有闪烁问题的
+        2.v-text会覆盖元素中原本的内容，{{}}只会替换占位符-->
+
+        <!--显示 vue笔记123-->
+        <p v-cloak>{{ message}}123</p>
+        <!--显示 vue笔记-->
+        <h3 v-text="message">123</h3>
+
+
+
+
+        <!--插值表达式{{}} 和 v-text都不会转义
+        v-html会对html标签转义，也会覆盖元素中原来的内容-->
+
+        <!--显示  <h1>第二个语句</h1>123  -->
+        <p>{{message2}}123</p>
+        <!--显示  <h1>第二个语句</h1>  -->
+        <p v-text="message2">123</p>
+        <!--显示 第二个语句   -->
+        <p v-html="message2">123</p>
+
+
+
+
+        <!--v-bind:用于绑定属性，会把引号中的内容当做表达式来解析-->
+        <input type="button" value="按钮" v-bind:title="title + '123'" >
+        <!--v-bind 可以简写，只留一个冒号-->
+        <input type="button" value="按钮" :title="title + '123'" >
+
+        <!--v-on:用于绑定事件-->
+        <input type="button" value="按钮2" v-on:click="show">
+       <!-- click 也可以改成别的事件，如mouseover鼠标覆盖事件等-->
+
+
+
+    </div>
+
+
+<script>
+    var a = new Vue({
+        el: '#app',
+        data:{
+            message: 'vue笔记',
+            message2:'<h1>第二个语句</h1>',
+            title:'这是我想要的title'
+        },
+        methods:{  //methods是一个对象，存放方法
+            show:function () {
+                alert("点击我了耶");
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--
+1.Vue代码基本结构
+2.插值表达式{{}}和v-text 元素内容赋值
+3.v-cloak:解决刷新闪烁
+4.v-html:对html标签转义
+5.v-bind:数据绑定
+6.v-on:事件绑定-->

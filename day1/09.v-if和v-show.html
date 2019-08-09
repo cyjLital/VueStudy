@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if和v-show</title>
+    <script src="https://unpkg.com/vue/dist/vue.js" ></script>
+
+</head>
+<body>
+    <div id="app">
+
+        <input type="button" @click="change" value="改变flag的值">
+        <!--由于change方法中只有一行代码，因此可以直接写为-->
+        <input type="button" @click="flag = !flag" value="改变flag的值">
+
+        <!-- v-if:每次都会删除或创建元素-->
+        <!-- v-show:每次不会进行dom的删除或创建操作，只是切换了display:none-->
+
+        <!-- v-if有较高的切换消耗，涉及频繁切换时不要使用-->
+        <!-- v-show有较高的初始渲染消耗，适合切换较多的情况，但是有可能元素被渲染后从来没有显示过-->
+        <h3 v-if="flag">v-if控制</h3>
+        <h3 v-show="flag">v-show控制</h3>
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                flag:true
+            },
+            methods:{
+                change(){
+                    /*if(this.flag){
+                        this.flag = false;
+                    }else{
+                        this.flag = true;
+                    }*/
+    //                    以上可以简写为一行代码
+                    this.flag = !this.flag;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
