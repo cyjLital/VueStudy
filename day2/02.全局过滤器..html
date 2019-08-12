@@ -8,14 +8,14 @@
 <body>
 <div id="app">
     <!--过滤器可以串联-->
-    {{msg | rep('狼') | test }}
+    {{msg | rep('狗') | test }}
 </div>
 
 <script>
 
     //全局Vue必须放在vue实例前面，否则无法触发全局过滤器
 
-    //过滤器，用于格式化文本，只能用在插值表达式胡v:bind上
+    //过滤器，用于格式化文本，只能用在插值表达式或v:bind上
     //第一个参数是过滤器名，第二个参数是操作函数
     //这是一个全局过滤器
     Vue.filter('rep',function (msg,arg) {
