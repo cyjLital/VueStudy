@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9726adb7-46ac-4b64-84ec-ae3cb822426e" name="Default Changelist" comment="" />
+    <list default="true" id="9726adb7-46ac-4b64-84ec-ae3cb822426e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/04.按键修饰符.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2/04.按键修饰符.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/05.文本框获取焦点.html" beforeDir="false" afterPath="$PROJECT_DIR$/day2/05.文本框获取焦点.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,11 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day2/01.品牌管理.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/05.文本框获取焦点.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="87" column="40" lean-forward="true" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+            <state relative-caret-position="412">
+              <caret line="235" column="7" lean-forward="true" selection-start-line="235" selection-start-column="7" selection-end-line="235" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/06.生命周期函数..html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day2/07.vue-resource基本使用..html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="11" selection-end-line="46" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -32,6 +54,9 @@
         <option value="VUE File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,14 +76,14 @@
         <option value="$PROJECT_DIR$/day1/09.v-if和v-show.html" />
         <option value="$PROJECT_DIR$/day2/01.hahah.html" />
         <option value="$PROJECT_DIR$/day2/02.全局过滤器.html" />
-        <option value="$PROJECT_DIR$/day2/02.全局过滤器..html" />
         <option value="$PROJECT_DIR$/day2/01.品牌管理.html" />
-        <option value="$PROJECT_DIR$/day2/04.按键修饰符.html" />
-        <option value="$PROJECT_DIR$/day2/03.品牌管理+日期过滤器.html" />
-        <option value="$PROJECT_DIR$/day2/05.文本框获取焦点.html" />
         <option value="$PROJECT_DIR$/day2/06.生命周期函数..html" />
         <option value="F:/SVN/PermissManagement/src/main/resources/static/Admin/07.vue-resource基本使用..html" />
         <option value="$PROJECT_DIR$/day2/07.vue-resource基本使用..html" />
+        <option value="$PROJECT_DIR$/day2/02.全局过滤器..html" />
+        <option value="$PROJECT_DIR$/day2/03.品牌管理+日期过滤器.html" />
+        <option value="$PROJECT_DIR$/day2/04.按键修饰符.html" />
+        <option value="$PROJECT_DIR$/day2/05.文本框获取焦点.html" />
       </list>
     </option>
   </component>
@@ -68,6 +93,7 @@
     <option name="width" value="753" />
     <option name="height" value="728" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -139,11 +165,12 @@
       <workItem from="1565226683112" duration="15619000" />
       <workItem from="1565256516588" duration="637000" />
       <workItem from="1565313101202" duration="5520000" />
+      <workItem from="1565572669725" duration="10841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51546000" />
+    <option name="totallyTimeSpent" value="62387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -245,54 +272,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/02.全局过滤器.html" />
-    <entry file="file://$PROJECT_DIR$/day2/02.全局过滤器..html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day1/01.Vue基础.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/03.品牌管理+日期过滤器.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="153" column="18" lean-forward="true" selection-start-line="153" selection-start-column="18" selection-end-line="153" selection-end-column="18" />
-          <folding>
-            <element signature="e#2678#4811#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/04.按键修饰符.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/06.生命周期函数..html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="66" column="78" lean-forward="true" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/05.文本框获取焦点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-          <folding>
-            <element signature="e#2184#3128#0" />
-            <element signature="e#3339#3649#0" />
-            <element signature="e#3216#5349#0" />
-            <element signature="e#5549#5952#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -303,24 +286,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/SVN/PermissManagement/src/main/resources/static/Admin/07.vue-resource基本使用..html">
+    <entry file="file://F:/SVN/PermissManagement/src/main/resources/static/Admin/07.vue-resource基本使用..html" />
+    <entry file="file://$USER_HOME$/Downloads/Vue-Personal-Notes-master/Vue-Personal-Notes-master/课件+源代码/day2/代码/code/02.品牌列表案例2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="286">
+          <caret line="181" column="28" lean-forward="true" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day2/07.vue-resource基本使用..html">
+    <entry file="file://$PROJECT_DIR$/day2/03.品牌管理+日期过滤器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="-1414">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/02.全局过滤器..html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day2/01.品牌管理.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="87" column="40" lean-forward="true" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+        <state relative-caret-position="346">
+          <caret line="111" column="22" lean-forward="true" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/04.按键修饰符.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/05.文本框获取焦点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="235" column="7" lean-forward="true" selection-start-line="235" selection-start-column="7" selection-end-line="235" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/06.生命周期函数..html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/07.vue-resource基本使用..html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="11" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,9 @@
             <label>
                 NAME:
                 <!--按键修饰符，vue提供了一些，也可以自定义-->
+                <!--参考https://cn.vuejs.org/v2/guide/events.html#%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6-->
                 <!--按下enter键就触发添加事件-->
+                <!--也可以使用按键码  @keyup.113="add"  相当于按下f2-->
                 <input type="text" class="form-control" v-model="name" @keyup.enter="add">
             </label>
             <input type="button" class="btn btn-primary" value="添加" @click="add">
@@ -100,7 +102,7 @@
             //每当指令绑定到元素上时，会立即执行bind函数，只执行一次
             bind:function (el) {
                 //在每个函数中，第一个参数永远是el，表示被绑定指令的元素，el是一个原生的js对象
-                //在元素刚绑定指令的时候，还没有插入到dom中，focus（）无效
+                //在元素刚绑定指令的时候，还没有插入到dom中，focus()无效
                 //一个元素只有插入到DOM中之后才能获得焦点
                 //el.focus();
             },
@@ -223,9 +225,10 @@
                 //fontsize简写
                 //等同于把代码同时写到bind和update中去
                 'fontsize':function (el,binding) {
+                    //无论使用指令时写 v-fontsize="50" 还是 v-fontsize="50px"  都可以转换成 50px
                     el.style.fontSize = parseInt(binding.value) + 'px';
                 }
-        }
+            }
 
         })
     </script>
